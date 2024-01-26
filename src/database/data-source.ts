@@ -15,6 +15,9 @@ export const dataSourceOptions: DataSourceOptions = {
   migrations: ['dist/database/migrations/*.js'],
   synchronize: true,
   extra: {
+    max: 10,
+    min: 1,
+    idleTimeoutMillis: 30000,
     ssl: {
       rejectUnauthorized: false,
     },
